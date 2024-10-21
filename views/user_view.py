@@ -2,9 +2,9 @@ from io import StringIO
 from flask import Blueprint, request, jsonify
 from services.user_service import UserService
 
-bp = Blueprint('user', __name__, url_prefix='/users')
+bp = Blueprint('user', __name__, url_prefix='/user')
 
-@bp.route('/create_user', methods=['POST'])
+@bp.route('/', methods=['POST'])
 def create_user():
     data = request.get_json()
     if 'name' not in data or 'age' not in data:

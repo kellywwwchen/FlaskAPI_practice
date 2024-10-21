@@ -7,7 +7,7 @@ basePath: /
 schemes:
   - http
 paths:
-  /users/create_user:
+  /user:
     post:
       summary: Create a new user
       description: Create a user with name and age
@@ -34,7 +34,6 @@ paths:
         409:
           description: User already exists
 
-  /users:
     get:
       summary: Get list of users
       description: Get a list of all users
@@ -42,7 +41,7 @@ paths:
         200:
           description: List of users
 
-  /users/{name}:
+  /user/{name}:
     delete:
       summary: Delete a user
       description: Delete a user by name
@@ -58,7 +57,7 @@ paths:
         404:
           description: User not found
 
-  /users/upload:
+  /user/upload:
     post:
       summary: Upload file to add multiple users
       description: Upload a file to add multiple users
@@ -76,7 +75,7 @@ paths:
         400:
           description: No file uploaded or invalid format
 
-  /users/average-age:
+  /user/average-age:
     get:
       summary: Get average age by group
       description: Calculate average age of each group of users

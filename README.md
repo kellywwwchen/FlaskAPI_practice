@@ -13,11 +13,11 @@
 - Group by the first character of the usernames.
 
 ### RESTful APIs
-- GET /users
-- POST /users/create_user
-- DELETE /users/delete_user
-- POST /users/upload
-- GET /users/average-age
+- GET /user
+- POST /user
+- DELETE /user/{name}
+- POST /user/upload
+- GET /user/average-age
 
 ### Folder
     project-folder/
