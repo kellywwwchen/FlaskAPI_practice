@@ -1,0 +1,87 @@
+swagger: '2.0'
+info:
+  title: User API
+  description: API for managing users
+  version: "1.0.0"
+basePath: /
+schemes:
+  - http
+paths:
+  /users/create_user:
+    post:
+      summary: Create a new user
+      description: Create a user with name and age
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            required:
+              - name
+              - age
+            properties:
+              name:
+                type: string
+                description: Name of the user
+              age:
+                type: integer
+                description: Age of the user
+      responses:
+        201:
+          description: User added successfully
+        400:
+          description: Name and age are required or ivalid age
+        409:
+          description: User already exists
+
+  /users:
+    get:
+      summary: Get list of users
+      description: Get a list of all users
+      responses:
+        200:
+          description: List of users
+
+  /users/{name}:
+    delete:
+      summary: Delete a user
+      description: Delete a user by name
+      parameters:
+        - name: name
+          in: path
+          type: string
+          required: true
+          description: Name of the user to delete
+      responses:
+        200:
+          description: User deleted successfully
+        404:
+          description: User not found
+
+  /users/upload:
+    post:
+      summary: Upload file to add multiple users
+      description: Upload a file to add multiple users
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          in: formData
+          type: file
+          required: true
+          description: The CSV file containing users (name, age)
+      responses:
+        201:
+          description: Users added from CSV
+        400:
+          description: No file uploaded or invalid format
+
+  /users/average-age:
+    get:
+      summary: Get average age by group
+      description: Calculate average age of each group of users
+      responses:
+        200:
+          description: Average age by group
+        404:
+          description: No users found
