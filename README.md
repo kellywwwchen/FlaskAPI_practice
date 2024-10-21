@@ -48,8 +48,8 @@
 
 ### Intallation
 ```
-git clone https://github.com/username/1022_practice.git
-cd 1022_practice
+git clone https://github.com/username/FlaskAPI_practice.git
+cd FlaskAPI_practice
 ```
 1. Virtualenv：
     ```
