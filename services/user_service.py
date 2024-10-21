@@ -20,7 +20,7 @@ class UserService:
     def upload_users(file_data):
         df = pd.read_csv(file_data)
         for _, row in df.iterrows():
-            UserService.create_user(row["Name"], row['Age'])
+            UserService.create_user(row["name"], row['age'])
 
     @staticmethod
     def average_age():
