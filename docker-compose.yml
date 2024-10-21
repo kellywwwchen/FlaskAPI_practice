@@ -8,3 +8,9 @@ services:
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.py
+  python:
+    image: python:3.10-slim
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: /bin/bash

@@ -61,7 +61,11 @@ cd FlaskAPI_practice
 2. Docker
     ```
     docker-compose up --build
-
+    ```
+    
+    ```
+    docker-compose run python /bin/bash
+    pip install -r requirements.txt
     ```
 
 ### Running Tests
