@@ -64,7 +64,7 @@ cd FlaskAPI_practice
     ```
     
     ```
-    docker-compose run python /bin/bash
+    docker-compose exec python /bin/bash
     pip install -r requirements.txt
     ```
 
