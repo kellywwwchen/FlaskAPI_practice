@@ -7,10 +7,10 @@
 - A GET API to get a list of users who have been added.
 - A POST API to add multiple users from CSV file.
 - The CSV file should be uploaded in API request.
-- Refer to the attached CSV file: backend_users.csv
+> Refer to the attached CSV file: backend_users.csv
 - A GET API to calculate average age of each group of users.
-- Please use pandas package to calculate  it.
-- Group by the first character of the usernames.
+> Please use pandas package to calculate  it.
+> Group by the first character of the usernames.
 
 ### RESTful APIs
 - GET /user
